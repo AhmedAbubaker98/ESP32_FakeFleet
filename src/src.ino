@@ -5,6 +5,7 @@
 #include <PubSubClient.h>
 #include <ArduinoJson.h>
 #include "ESP32OTAPull.h"
+#define LED 2
 #define JSON_URL   "https://github.com/AhmedAbubaker98/ESP32_FakeFleet/tree/main/src/version_control.json"
 #define VERSION    "0.3" // The current version of this program
 
