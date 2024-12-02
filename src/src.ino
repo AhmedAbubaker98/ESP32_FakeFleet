@@ -65,6 +65,7 @@ void connectWiFiAWS()
  
 void publishMessage()
 {
+  digitalWrite(LED,HIGH);
   StaticJsonDocument<200> doc;
   doc["h"] = random(10);
   doc["t"] = random(1000);
@@ -73,6 +74,8 @@ void publishMessage()
  
   client.publish(AWS_IOT_PUBLISH_TOPIC, jsonBuffer);
   Serial.println("Sent!");
+  digitalWrite(LED,LOW);
+
 }
  
 void messageHandler(char* topic, byte* payload, unsigned int length)
@@ -88,6 +91,7 @@ void messageHandler(char* topic, byte* payload, unsigned int length)
  
 void setup()
 {
+  pinMode(LED,OUTPUT);
   Serial.begin(115200);
   setupOTA("ESP32_FakeFleet", WIFI_SSID, WIFI_PASSWORD);
 
