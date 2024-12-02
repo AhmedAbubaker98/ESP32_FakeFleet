@@ -7,7 +7,7 @@
 #include "ESP32OTAPull.h"
 #define LED 2
 #define JSON_URL   "https://raw.githubusercontent.com/AhmedAbubaker98/ESP32_FakeFleet/refs/heads/main/src/version_control.json"
-#define VERSION    "0.3" // The current version of this program
+#define VERSION    "0.4" // The current version of this program
 
 #define AWS_IOT_PUBLISH_TOPIC   "ESP32Thing/pub"
 #define AWS_IOT_SUBSCRIBE_TOPIC "ESP32Thing/sub"
@@ -74,7 +74,7 @@ void publishMessage()
   serializeJson(doc, jsonBuffer); // print to client
  
   client.publish(AWS_IOT_PUBLISH_TOPIC, jsonBuffer);
-  Serial.println("Sent!");
+  Serial.println("Sentt!");
   digitalWrite(LED,LOW);
 
 }
