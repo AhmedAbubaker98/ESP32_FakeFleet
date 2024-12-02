@@ -6,8 +6,13 @@
 #include <ArduinoJson.h>
 #include "ESP32OTAPull.h"
 #define LED 2
+<<<<<<< Updated upstream
 #define JSON_URL   "https://raw.githubusercontent.com/AhmedAbubaker98/ESP32_FakeFleet/refs/heads/main/src/version_control.json"
 #define VERSION    "0.4" // The current version of this program
+=======
+#define JSON_URL   "https://raw.githubusercontent.com/AhmedAbubaker98/ESP32_FakeFleet/main/src/version_control.json"
+#define VERSION    "0.3" // The current version of this program
+>>>>>>> Stashed changes
 
 #define AWS_IOT_PUBLISH_TOPIC   "ESP32Thing/pub"
 #define AWS_IOT_SUBSCRIBE_TOPIC "ESP32Thing/sub"
