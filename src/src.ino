@@ -72,6 +72,7 @@ void publishMessage()
   serializeJson(doc, jsonBuffer); // print to client
  
   client.publish(AWS_IOT_PUBLISH_TOPIC, jsonBuffer);
+  Serial.println("Sent!");
 }
  
 void messageHandler(char* topic, byte* payload, unsigned int length)
@@ -105,7 +106,6 @@ void loop()
 {
  
   publishMessage();
-  Serial.println("Sent!");
   client.loop();
   delay(2000);
 }

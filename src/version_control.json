@@ -2,7 +2,7 @@
   "Configurations": [
     {
       "Version": "0.4",
-      "URL": "https://example.com/myimages/example.esp32_dev.v2.bin"
+      "URL": "https://github.com/AhmedAbubaker98/ESP32_FakeFleet/blob/main/src/build/esp32.esp32.esp32da/src.ino.bin"
     }
   ]
 }
